@@ -14,7 +14,7 @@ export default function ConnectAccount (props){
             <EmptyState
                     heading={props.isConnected ? "Let's get started" : "Welcome,"}
                     action={props.isConnected ? {content: 'Start Tracking', onAction: () => props.handleTracking()}:{content: 'Connect', onAction: () => props.handleConnect()}}
-                    image="https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg"
+                    image={require('../assets/bg.svg')}
                     >
                 <Heading>{props.isConnected ? "To create a tracker, select your account and click start . ": "Connect your google Ads account to get started "}</Heading>
                 {props.isConnected ? <Select
