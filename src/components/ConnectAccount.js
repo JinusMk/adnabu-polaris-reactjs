@@ -1,5 +1,6 @@
 import React from 'react'
 import { Page, Card, DisplayText, Layout, TextContainer, Heading, Button, Banner, Select, Stack, EmptyState } from '@shopify/polaris'
+import CollapsibleComponent from '../components/Collapsible'
 export default function ConnectAccount (props){
     return(
         <div className="connect-account">
@@ -24,6 +25,7 @@ export default function ConnectAccount (props){
                          {/* </Layout> */}
                          <Button primary onClick={props.handleTracking}>Start Tracking</Button>
                 </div> : 
+                <div>
                 <EmptyState
                     heading="Welcome,"
                     action={{content: 'Connect', onAction: () => props.handleConnect()}}
@@ -31,6 +33,8 @@ export default function ConnectAccount (props){
                     >
                     <p>Connect your google Ads account to get started </p>
                 </EmptyState>
+                <CollapsibleComponent/>
+                </div>
             }
             
         </div>
