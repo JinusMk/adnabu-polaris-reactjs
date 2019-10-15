@@ -2,18 +2,29 @@ body{
     .connect-account{
         padding: 20px;
         border-bottom: 1px solid #DFE3E8;
-        .Polaris-TextContainer{
-            margin-top: 150px;
-            h1{
-                font-size: 30px;
-                font-weight: 600;
-                text-shadow: 2px 2px 2px #a8a8a8;
-                line-height: 30px;
-            }
-        }
+        // .Polaris-TextContainer{
+        //     margin-top: 150px;
+        //     h1{
+        //         font-size: 30px;
+        //         font-weight: 600;
+        //         text-shadow: 2px 2px 2px #a8a8a8;
+        //         line-height: 30px;
+        //     }
+        // }
     }
     .dashboard-tab{
         margin-top: 25px;
         padding: 20px;
+        .Polaris-DataTable__Cell--verticalAlignTop{
+            text-align: left
+        }
+        .Polaris-Banner--statusSuccess{
+            margin-top: 39px;
+            margin-bottom:32px;
+        }
+        .Polaris-Card{
+            margin-top: 11px;
+            margin-bottom: 28px
+        }
     }
 }
