@@ -15,5 +15,16 @@ body{
     .dashboard-tab{
         margin-top: 25px;
         padding: 20px;
+        .Polaris-DataTable__Cell--verticalAlignTop{
+            text-align: left
+        }
+        .Polaris-Banner--statusSuccess{
+            margin-top: 39px;
+            margin-bottom:32px;
+        }
+        .Polaris-Card{
+            margin-top: 11px;
+            margin-bottom: 28px
+        }
     }
 }
