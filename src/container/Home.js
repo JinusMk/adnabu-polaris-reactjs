@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Page, Layout, Card, Tabs, DisplayText } from '@shopify/polaris'
 import { tabs } from '../constants'
-import { ConnectAccount, DashboardTab } from '../components'
+import { ConnectAccount, DashboardTab, HelpTab } from '../components'
 export default class Home extends Component {
     constructor(props){
         super(props);
@@ -58,6 +58,7 @@ export default class Home extends Component {
 
                     }
                     {
+                        activeTab==2 && <HelpTab/>
 
                     }
                 </Tabs>
