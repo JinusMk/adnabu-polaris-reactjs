@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Page, Layout, Card, Tabs, DisplayText } from '@shopify/polaris'
 import { tabs } from '../constants'
-import { ConnectAccount, DashboardTab } from '../components'
+import { ConnectAccount, DashboardTab, HelpTab } from '../components'
 export default class Home extends Component {
     constructor(props){
         super(props);
@@ -31,21 +31,21 @@ export default class Home extends Component {
             trackingFlag: true,
         })
     }
+   
     render(){
         const { activeTab, isConnected, trackingFlag } = this.state
         return(
             <Page>
                 <Tabs tabs={tabs} selected={activeTab} onSelect={this.handleTabChange}>
-                    {
-                        activeTab === 0 ? trackingFlag ? <DashboardTab handleAccountChange={this.handleAccountChange} /> 
-                        : <ConnectAccount 
+                        {activeTab == 0 && trackingFlag && <DashboardTab handleAccountChange={this.handleAccountChange} /> }
+                       { activeTab == 0 && !trackingFlag && <ConnectAccount 
                             handleAccountChange={this.handleAccountChange} 
                             trackingFlag={trackingFlag} 
                             isConnected={isConnected} 
                             handleConnect={this.handleConnect} 
-                            handleTracking={this.handleTracking}/> : null
-                    }
+                            handleTracking={this.handleTracking}/> }
                     {
+                        activeTab==2 && <HelpTab/>
 
                     }
                 </Tabs>
