@@ -2,6 +2,7 @@ import React from 'react'
 import { Stack, Heading, Select, Banner, } from '@shopify/polaris'
 import PixelDataTable from './PixelDataTable.js'
 import ActionItem from './ActionItem'
+import CollapsibleComponent from './Collapsible'
 export default function DashboardTab(props){
     return(
         <div className="dashboard-tab">
@@ -21,10 +22,11 @@ export default function DashboardTab(props){
                 <p>Tracker (Adnabutest) has beenset up or your Google Ads account 0345645334</p>
             </Banner>
             <PixelDataTable/>
-            <div style={{margin: '22px 0px', borderBottom: '1px solid #DFE3E8'}}>
+            <div style={{margin: '22px 0px'}}>
                 <Heading>Actions</Heading>
                 <ActionItem />
             </div>
+            <CollapsibleComponent/>
         </div>
     )
 }

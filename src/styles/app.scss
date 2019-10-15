@@ -11,6 +11,10 @@ body{
         //         line-height: 30px;
         //     }
         // }
+        .Polaris-Banner--statusSuccess{
+            margin-top: 39px;
+            margin-bottom:32px;
+        }
     }
     .dashboard-tab{
         margin-top: 25px;
@@ -25,6 +29,14 @@ body{
         .Polaris-Card{
             margin-top: 11px;
             margin-bottom: 28px
+        }
+    }
+    .queries{
+        .Polaris-Card{
+           margin: 0;
+           .Polaris-Card__Section{
+            padding: 15px 30px 5px 30px;
+           }
         }
     }
 }
