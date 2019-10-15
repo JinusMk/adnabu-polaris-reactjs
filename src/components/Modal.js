@@ -19,14 +19,14 @@ export default function ModalComponent(props) {
     <Modal
       open={active}
       onClose={handleChange}
-      title="Reach more shoppers with Instagram product tags"
+      title="Shopping Charges"
       primaryAction={{
-        content: 'Add Instagram',
+        content: 'NO(recommended)',
         onAction: handleChange,
       }}
       secondaryActions={[
         {
-          content: 'Learn more',
+          content: 'YES',
           onAction: handleChange,
         },
       ]}
@@ -34,9 +34,7 @@ export default function ModalComponent(props) {
       <Modal.Section>
         <TextContainer>
           <p>
-            Use Instagram posts to share your products with millions of
-            people. Let shoppers buy from your store without leaving
-            Instagram.
+           Do you want to include shopping charges in your conversion/sale value?
           </p>
         </TextContainer>
       </Modal.Section>
