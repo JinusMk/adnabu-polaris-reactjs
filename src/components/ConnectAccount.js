@@ -1,11 +1,16 @@
 import React from 'react'
 import { Page, Card, DisplayText, Layout, TextContainer, Heading, Button, Banner, Select, Stack, EmptyState } from '@shopify/polaris'
+import ModalComponent from './Modal'
 import CollapsibleComponent from '../components/Collapsible'
 export default function ConnectAccount (props){
+    console.log('propsConnectAc', props)
     return(
         <div className="connect-account">
             {
-                props.isConnected ?  <Banner
+                props.modalOpen ? <ModalComponent modalOpen={props.modalOpen} handleModalClick={props.handleModalClick}/> : null
+            }
+            {
+            !props.modalOpen && props.isConnected ?  <Banner
                 title="You have successfully logged into test@gmail.com"
                 status="success"
                 onDismiss={() => {}} 

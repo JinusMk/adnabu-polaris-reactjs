@@ -7,27 +7,21 @@ import {
   
 } from "@shopify/polaris";
 
-
 export default function ModalComponent(props) {
-    const [active, setActive] = useState(true);
-
-    const handleChange = useCallback(() => setActive(!active), [active]);
-
   return (
     <div style={{height: '500px'}}>
-    <Button onClick={handleChange}>Open</Button>
     <Modal
-      open={active}
-      onClose={handleChange}
+      open={props.modalOpen}
+      onClose={() => props.handleModalClick()}
       title="Shopping Charges"
       primaryAction={{
         content: 'NO(recommended)',
-        onAction: handleChange,
+        onAction: props.handleModalClick,
       }}
       secondaryActions={[
         {
           content: 'YES',
-          onAction: handleChange,
+          onAction: props.handleModalClick,
         },
       ]}
     >

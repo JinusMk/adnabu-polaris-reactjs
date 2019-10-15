@@ -26,24 +26,36 @@ export default class Home extends Component {
         console.log('Account change clicked')
     }
     handleTracking = () => {
-        console.log('Handle Tracking clicked')
         this.setState({
             trackingFlag: true,
+            modalOpen: true
         })
     }
+    handleModalClick = () => {
+        console.log('handkeModalClick')
+        this.setState((prevState) => ({
+            modalOpen: false
+        }))
+    }
     render(){
-        const { activeTab, isConnected, trackingFlag } = this.state
+        const { activeTab, isConnected, trackingFlag, modalOpen } = this.state
+        console.log('propsHome', this.state)
         return(
             <Page>
                 <Tabs tabs={tabs} selected={activeTab} onSelect={this.handleTabChange}>
                     {
-                        activeTab === 0 ? trackingFlag ? <DashboardTab handleAccountChange={this.handleAccountChange} /> 
+                        activeTab === 0 ? (trackingFlag && !modalOpen) ? <DashboardTab handleAccountChange={this.handleAccountChange} /> 
                         : <ConnectAccount 
                             handleAccountChange={this.handleAccountChange} 
                             trackingFlag={trackingFlag} 
                             isConnected={isConnected} 
                             handleConnect={this.handleConnect} 
-                            handleTracking={this.handleTracking}/> : null
+                            handleTracking={this.handleTracking}
+                            modalOpen={modalOpen}
+                            handleModalClick={this.handleModalClick}
+                            /> 
+                            : null
+
                     }
                     {
 
