@@ -29,7 +29,6 @@ export default function CollapsibleComponent(props) {
       case 3:
         setActive3(active3 => !active3);
         break;
-
       default:
         break;
     }
@@ -45,7 +44,7 @@ export default function CollapsibleComponent(props) {
       }}
     >
       <Heading element="h1">Common Queries</Heading>
-      <div style={{ marginTop: 21 }}>
+      <div className="queries" style={{ marginTop: 21 }}>
         <Card>
           <Card.Section>
             <div onClick={() => handleToggle(1)}>
@@ -56,9 +55,8 @@ export default function CollapsibleComponent(props) {
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                      <DisplayText element="p" size="small">
-                        Should I remove old pixels
-                      </DisplayText>
+                        <p style={{fontSize: '16px'}}>Should I remove old pixels</p>
+                      
                     </Stack.Item>
                     <Stack.Item>
                       {active1 ? (
@@ -69,7 +67,7 @@ export default function CollapsibleComponent(props) {
                     </Stack.Item>
                   </Stack>
                   <Collapsible open={active1} id="basic-collapsible">
-                    <p>
+                    <p style={{marginBottom: '10px'}}>
                       Your mailing list lets you contact customers or visitors
                       who have shown an interest in your store. Reach out to
                       them with exclusive offers or updates about your products.
@@ -88,9 +86,7 @@ export default function CollapsibleComponent(props) {
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                      <DisplayText element="p" size="small">
-                        Should I remove old pixels
-                      </DisplayText>
+                      <p style={{fontSize: '16px'}}>Should I remove old pixels</p>
                     </Stack.Item>
                     <Stack.Item>
                       {active2 ? (
@@ -101,7 +97,7 @@ export default function CollapsibleComponent(props) {
                     </Stack.Item>
                   </Stack>
                   <Collapsible open={active2} id="basic-collapsible">
-                    <p>
+                  <p style={{marginBottom: '10px'}}>
                       Your mailing list lets you contact customers or visitors
                       who have shown an interest in your store. Reach out to
                       them with exclusive offers or updates about your products.
@@ -120,9 +116,7 @@ export default function CollapsibleComponent(props) {
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                      <DisplayText element="p" size="small">
-                        Should I remove old pixels
-                      </DisplayText>
+                        <p style={{fontSize: '16px'}}>Should I remove old pixels</p>
                     </Stack.Item>
                     <Stack.Item>
                       {active3 ? (
@@ -133,7 +127,7 @@ export default function CollapsibleComponent(props) {
                     </Stack.Item>
                   </Stack>
                   <Collapsible open={active3} id="basic-collapsible">
-                    <p>
+                  ]<p style={{marginBottom: '10px'}}>
                       Your mailing list lets you contact customers or visitors
                       who have shown an interest in your store. Reach out to
                       them with exclusive offers or updates about your products.
