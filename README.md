@@ -12,7 +12,7 @@ Now that you have the CLI available for use, then clone the private repository t
 ### `git@github.com:JinusMk/AdNabuPolarisReact.git`
 move into root directory
 ### `cd AdNabuPolarisReact`
-then install node packages(you can use yarn package manager also)
+then install node packages(you can use yarn/npm package manager)
 ### `npm install | yarn install`
 
 
