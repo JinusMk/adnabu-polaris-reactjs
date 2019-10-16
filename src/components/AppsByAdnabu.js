@@ -45,8 +45,8 @@ export default function HelpTab(props) {
       >
         <Stack spacing="extraLoose" Vertical>
           <Stack.Item>
-            <Stack distribution="fillEvenly" horizontal>
-              <div style={{ width: 350, height: 150 }}>
+            <Stack distribution="equalSpacing" horizontal>
+            <div style={{ width: 350, height: 150, marginLeft: 32 }}>
                 <Stack.Item>
                   <Stack horizontal>
                     <Stack.Item>
@@ -183,8 +183,8 @@ export default function HelpTab(props) {
             </Stack>
           </Stack.Item>
           <Stack.Item>
-            <Stack distribution="fillEvenly" horizontal>
-              <div style={{ width: 350, height: 150 }}>
+            <Stack distribution="equalSpacing" horizontal>
+              <div style={{ width: 350, height: 150, marginLeft: 32 }}>
                 <Stack.Item>
                   <Stack horizontal>
                     <Stack.Item>
