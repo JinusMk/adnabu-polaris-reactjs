@@ -10,10 +10,10 @@ export default function HelpTab(props) {
     <div>
       <div
         style={{
-          marginLeft: 28,
-          marginTop: 76,
-          marginBottom: 76,
-          marginRight: 28
+          marginLeft: 55,
+          marginTop: 50,
+          padding: 20,
+          marginBottom: 50
         }}
       >
         <Stack vertical>
@@ -44,7 +44,7 @@ export default function HelpTab(props) {
         </Stack>
       </div>
       <div
-        style={{ backgroundColor: "white", marginLeft: 32, marginRight: 32 }}
+        style={{ backgroundColor: "white" }}
       >
         <Stack spacing="extraLoose" Vertical>
           <Stack.Item>
@@ -55,9 +55,7 @@ export default function HelpTab(props) {
                     <Stack.Item>
                       <div
                         style={{
-                          marginTop: 5,
-                          marginLeft: 10,
-                          marginRight: 10,
+                          marginTop: 15,
                           borderRadius: 10,
                           backgroundColor: "white",
                           boxShadow: "1px 1px 6px 2px #D3D3D3"

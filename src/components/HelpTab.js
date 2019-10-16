@@ -6,7 +6,7 @@ import { FAQs } from "../constants";
 
 export default function HelpTab(props) {
   return (
-    <div style={{ marginTop: 57, marginLeft: 33, marginRight: 33 }}>
+    <div style={{ marginTop: 30,padding: 20 }}>
       <Heading element="h1">Frequently asked questions</Heading>
       <div
         style={{
