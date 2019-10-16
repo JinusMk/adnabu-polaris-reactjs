@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from "react";
 import {
   Card,
-  DisplayText,
   Heading,
   Collapsible,
   Stack,
@@ -12,6 +11,8 @@ import {
   ChevronDownMinor,
   DisputeMinor
 } from "@shopify/polaris-icons";
+
+//Collapsible shown for Common FAQs
 
 export default function CollapsibleComponent(props) {
   const [active1, setActive1] = useState(false);
@@ -55,8 +56,9 @@ export default function CollapsibleComponent(props) {
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                        <p style={{fontSize: '16px'}}>Should I remove old pixels</p>
-                      
+                      <p style={{ fontSize: "16px" }}>
+                        Should I remove old pixels
+                      </p>
                     </Stack.Item>
                     <Stack.Item>
                       {active1 ? (
@@ -67,7 +69,7 @@ export default function CollapsibleComponent(props) {
                     </Stack.Item>
                   </Stack>
                   <Collapsible open={active1} id="basic-collapsible">
-                    <p style={{marginBottom: '10px'}}>
+                    <p style={{ marginBottom: "10px" }}>
                       Your mailing list lets you contact customers or visitors
                       who have shown an interest in your store. Reach out to
                       them with exclusive offers or updates about your products.
@@ -86,7 +88,9 @@ export default function CollapsibleComponent(props) {
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                      <p style={{fontSize: '16px'}}>Should I remove old pixels</p>
+                      <p style={{ fontSize: "16px" }}>
+                        Should I remove old pixels
+                      </p>
                     </Stack.Item>
                     <Stack.Item>
                       {active2 ? (
@@ -97,7 +101,7 @@ export default function CollapsibleComponent(props) {
                     </Stack.Item>
                   </Stack>
                   <Collapsible open={active2} id="basic-collapsible">
-                  <p style={{marginBottom: '10px'}}>
+                    <p style={{ marginBottom: "10px" }}>
                       Your mailing list lets you contact customers or visitors
                       who have shown an interest in your store. Reach out to
                       them with exclusive offers or updates about your products.
@@ -116,7 +120,9 @@ export default function CollapsibleComponent(props) {
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                        <p style={{fontSize: '16px'}}>Should I remove old pixels</p>
+                      <p style={{ fontSize: "16px" }}>
+                        Should I remove old pixels
+                      </p>
                     </Stack.Item>
                     <Stack.Item>
                       {active3 ? (
@@ -127,7 +133,7 @@ export default function CollapsibleComponent(props) {
                     </Stack.Item>
                   </Stack>
                   <Collapsible open={active3} id="basic-collapsible">
-                  ]<p style={{marginBottom: '10px'}}>
+                    <p style={{ marginBottom: "10px" }}>
                       Your mailing list lets you contact customers or visitors
                       who have shown an interest in your store. Reach out to
                       them with exclusive offers or updates about your products.

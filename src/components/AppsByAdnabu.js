@@ -1,15 +1,19 @@
 import React from "react";
 import { Stack, DisplayText, Icon, Avatar } from "@shopify/polaris";
 import { StarFilledMinor } from "@shopify/polaris-icons";
+
+//List 2*2 display for apps by AdNabu
+//Iterate over row and then drop 2 item each row
+
 export default function HelpTab(props) {
   return (
     <div>
       <div
         style={{
-          marginLeft: 50,
+          marginLeft: 28,
           marginTop: 76,
           marginBottom: 76,
-          marginRight: 50
+          marginRight: 28
         }}
       >
         <Stack vertical>
@@ -41,12 +45,12 @@ export default function HelpTab(props) {
         </Stack>
       </div>
       <div
-        style={{ backgroundColor: "white", marginLeft: 56, marginRight: 56 }}
+        style={{ backgroundColor: "white", marginLeft: 32, marginRight: 32 }}
       >
         <Stack spacing="extraLoose" Vertical>
           <Stack.Item>
             <Stack distribution="equalSpacing" horizontal>
-            <div style={{ width: 350, height: 150, marginLeft: 32 }}>
+              <div style={{ width: 350, height: 150, marginLeft: 32 }}>
                 <Stack.Item>
                   <Stack horizontal>
                     <Stack.Item>
