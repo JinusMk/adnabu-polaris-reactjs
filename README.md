@@ -3,7 +3,7 @@ AdNabu Plugin for Shopify.
 # Setup
 ## Installation
 
-In the project root directory, run(you might need administrative privileges):
+In the terminal, run one time environment setup for react cli(you might need administrative privileges):
 
 ### `npm install -g create-react-app`
 
