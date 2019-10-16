@@ -75,9 +75,9 @@ export default class Home extends Component {
                 />
               )
             ) : null}
-            {activeTab == 3 && <AppsByAdnabu />}
-            {activeTab == 1 && <MyPixelTab />}
-            {activeTab == 2 && <HelpTab />}
+            {activeTab === 3 && <AppsByAdnabu />}
+            {activeTab === 1 && <MyPixelTab />}
+            {activeTab === 2 && <HelpTab />}
           </Tabs>
         </div>
       </Page>

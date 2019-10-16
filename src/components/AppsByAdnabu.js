@@ -32,7 +32,6 @@ export default function HelpTab(props) {
               </Stack.Item>
               <Stack.Item>
                 <Icon
-                  color="inkLighter"
                   color="yellow"
                   source={StarFilledMinor}
                 />
@@ -100,7 +99,6 @@ export default function HelpTab(props) {
                           <Stack horizontal spacing="extraTight">
                             <Stack.Item>
                               <Icon
-                                color="inkLighter"
                                 color="yellow"
                                 source={StarFilledMinor}
                               />
@@ -167,7 +165,6 @@ export default function HelpTab(props) {
                           <Stack horizontal spacing="extraTight">
                             <Stack.Item>
                               <Icon
-                                color="inkLighter"
                                 color="yellow"
                                 source={StarFilledMinor}
                               />
@@ -238,7 +235,6 @@ export default function HelpTab(props) {
                           <Stack horizontal spacing="extraTight">
                             <Stack.Item>
                               <Icon
-                                color="inkLighter"
                                 color="yellow"
                                 source={StarFilledMinor}
                               />
@@ -305,7 +301,6 @@ export default function HelpTab(props) {
                           <Stack horizontal spacing="extraTight">
                             <Stack.Item>
                               <Icon
-                                color="inkLighter"
                                 color="yellow"
                                 source={StarFilledMinor}
                               />
