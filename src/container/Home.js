@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Page, Layout, Card, Tabs, DisplayText } from '@shopify/polaris'
 import { tabs } from '../constants'
-import { ConnectAccount, DashboardTab, HelpTab } from '../components'
+import { ConnectAccount, DashboardTab, HelpTab, MyPixelTab } from '../components'
 export default class Home extends Component {
     constructor(props){
         super(props);
@@ -33,7 +33,7 @@ export default class Home extends Component {
     }
     handleModalClick = () => {
         console.log('handkeModalClick')
-        this.setState((prevState) => ({
+        this.setState(() => ({
             modalOpen: false
         }))
     }
@@ -58,8 +58,10 @@ export default class Home extends Component {
 
                     }
                     {
-                        activeTab==2 && <HelpTab/>
-
+                        activeTab == 1 && <MyPixelTab />
+                    }
+                    {
+                        activeTab ==2 && <HelpTab/>
                     }
                 </Tabs>
             </Page>
