@@ -3,6 +3,12 @@ import { Stack, Heading, Select, Banner, } from '@shopify/polaris'
 import PixelDataTable from './PixelDataTable.js'
 import ActionItem from './ActionItem'
 import CollapsibleComponent from './Collapsible'
+  const rows = [
+        ['Latest sale received on (any surce)', 'No data yet'],
+        ['Latest sale received at Google Ads', '--'],
+        ['Total save values (google ads) recorded in last 30 days', '--'],
+        ['Passing sharges along with sale', 'No'],
+      ];
 export default function DashboardTab(props){
     return(
         <div className="dashboard-tab">
@@ -21,7 +27,7 @@ export default function DashboardTab(props){
                 >
                 <p>Tracker (Adnabutest) has beenset up or your Google Ads account 0345645334</p>
             </Banner>
-            <PixelDataTable/>
+            <PixelDataTable rows={rows}/>
             <div style={{margin: '22px 0px'}}>
                 <Heading>Actions</Heading>
                 <ActionItem />

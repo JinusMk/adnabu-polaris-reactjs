@@ -39,4 +39,11 @@ body{
            }
         }
     }
+    .myPixel-tab{
+        padding: 20px;
+        margin-top: 30px;
+        .Polaris-DataTable__Cell--verticalAlignTop{
+            text-align: left
+        } 
+    }
 }

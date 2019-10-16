@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Page, Layout, Card, Tabs, DisplayText } from '@shopify/polaris'
+import { Page, Tabs } from '@shopify/polaris'
 import { tabs } from '../constants'
-import { ConnectAccount, DashboardTab, HelpTab, AppsByAdnabu } from '../components'
+import { ConnectAccount, DashboardTab, HelpTab, MyPixelTab, AppsByAdnabu } from '../components'
 export default class Home extends Component {
     constructor(props){
         super(props);
@@ -26,31 +26,45 @@ export default class Home extends Component {
         console.log('Account change clicked')
     }
     handleTracking = () => {
-        console.log('Handle Tracking clicked')
         this.setState({
             trackingFlag: true,
+            modalOpen: true
         })
     }
-   
+    handleModalClick = () => {
+        console.log('handkeModalClick')
+        this.setState(() => ({
+            modalOpen: false
+        }))
+    }
     render(){
-        const { activeTab, isConnected, trackingFlag } = this.state
+        const { activeTab, isConnected, trackingFlag, modalOpen } = this.state
+        console.log('propsHome', this.state)
         return(
             <Page>
                 <Tabs tabs={tabs} selected={activeTab} onSelect={this.handleTabChange}>
-                        {activeTab == 0 && trackingFlag && <DashboardTab handleAccountChange={this.handleAccountChange} /> }
-                       { activeTab == 0 && !trackingFlag && <ConnectAccount 
+                    {
+                        activeTab === 0 ? (trackingFlag && !modalOpen) ? <DashboardTab handleAccountChange={this.handleAccountChange} /> 
+                        : <ConnectAccount 
                             handleAccountChange={this.handleAccountChange} 
                             trackingFlag={trackingFlag} 
                             isConnected={isConnected} 
                             handleConnect={this.handleConnect} 
-                            handleTracking={this.handleTracking}/> }
-                    {
-                        activeTab==2 && <HelpTab/>
+                            handleTracking={this.handleTracking}
+                            modalOpen={modalOpen}
+                            handleModalClick={this.handleModalClick}
+                            /> 
+                            : null
 
                     }
                     {
                         activeTab==3 && <AppsByAdnabu/>
+                    }{
 
+                        activeTab == 1 && <MyPixelTab />
+                    }
+                    {
+                        activeTab ==2 && <HelpTab/>
                     }
                 </Tabs>
             </Page>
