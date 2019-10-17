@@ -27,7 +27,7 @@ export default function Header(props) {
           </div>
         </Stack.Item>
         <Stack.Item fill>
-          <p style={{ fontSize: 16, fontWeight: 300 }}>
+          <p style={{ fontSize: 16,maxWidth: '50vw', wordWrap: 'break-word', fontWeight: 300 }}>
             Google Adwork Conversion Pixel & Tracking Code
           </p>
         </Stack.Item>

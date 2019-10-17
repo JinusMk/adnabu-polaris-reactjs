@@ -12,7 +12,7 @@ import {
   DisputeMinor
 } from "@shopify/polaris-icons";
 
-//Collapsible shown for Common FAQs
+//Collapsible shown for Common FAQs add to stack
 
 export default function CollapsibleComponent(props) {
   const [active1, setActive1] = useState(false);
@@ -55,7 +55,7 @@ export default function CollapsibleComponent(props) {
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                      <p style={{ fontSize: "16px", maxWidth: '40vw', wordWrap: 'break-word' }}>
+                      <p style={{ fontSize: "16px",maxWidth: '40vw', wordWrap: 'break-word' }}>
                         Should I remove old pixels
                       </p>
                     </Stack.Item>

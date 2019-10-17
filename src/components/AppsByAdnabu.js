@@ -3,7 +3,7 @@ import { Stack, DisplayText, Icon, Avatar } from "@shopify/polaris";
 import { StarFilledMinor } from "@shopify/polaris-icons";
 
 //List 2*2 display for apps by AdNabu
-//Iterate over row and then drop 2 item each row
+//Iterate over row and then drop 2 item each row 
 
 export default function HelpTab(props) {
   return (
