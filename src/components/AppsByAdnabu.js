@@ -55,7 +55,6 @@ export default function HelpTab(props) {
                     <Stack.Item>
                       <div
                         style={{
-                          marginTop: 5,
                           marginLeft: 10,
                           marginRight: 10,
                           borderRadius: 10,
@@ -121,7 +120,6 @@ export default function HelpTab(props) {
                     <Stack.Item>
                       <div
                         style={{
-                          marginTop: 5,
                           marginLeft: 10,
                           marginRight: 10,
                           borderRadius: 10,
@@ -191,7 +189,6 @@ export default function HelpTab(props) {
                     <Stack.Item>
                       <div
                         style={{
-                          marginTop: 5,
                           marginLeft: 10,
                           marginRight: 10,
                           borderRadius: 10,
@@ -257,7 +254,6 @@ export default function HelpTab(props) {
                     <Stack.Item>
                       <div
                         style={{
-                          marginTop: 5,
                           marginLeft: 10,
                           marginRight: 10,
                           borderRadius: 10,

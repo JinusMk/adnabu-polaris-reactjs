@@ -38,7 +38,6 @@ export default function CollapsibleComponent(props) {
   return (
     <div
       style={{
-        height: "600px",
         borderTop: "1px solid #DFE3E8",
         paddingTop: 38,
         position: "relative"
@@ -51,12 +50,12 @@ export default function CollapsibleComponent(props) {
             <div onClick={() => handleToggle(1)}>
               <Card.Subsection>
                 <Stack spacing="tight" vertical>
-                  <Stack alignment="center" horizontal>
+                  <Stack alignment="center" spacing="fill" horizontal>
                     <Stack.Item>
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                      <p style={{ fontSize: "16px" }}>
+                      <p style={{ fontSize: "16px", maxWidth: '40vw', wordWrap: 'break-word' }}>
                         Should I remove old pixels
                       </p>
                     </Stack.Item>
@@ -88,7 +87,7 @@ export default function CollapsibleComponent(props) {
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                      <p style={{ fontSize: "16px" }}>
+                      <p style={{ fontSize: "16px", maxWidth: '40vw', wordWrap: 'break-word' }}>
                         Should I remove old pixels
                       </p>
                     </Stack.Item>
@@ -120,11 +119,11 @@ export default function CollapsibleComponent(props) {
                       <Icon color="inkLighter" source={DisputeMinor} />
                     </Stack.Item>
                     <Stack.Item fill>
-                      <p style={{ fontSize: "16px" }}>
+                      <p style={{ fontSize: "16px", maxWidth: '40vw', wordWrap: 'break-word' }}>
                         Should I remove old pixels
                       </p>
                     </Stack.Item>
-                    <Stack.Item>
+                    <Stack.Item >
                       {active3 ? (
                         <Icon color="inkLighter" source={ChevronDownMinor} />
                       ) : (
