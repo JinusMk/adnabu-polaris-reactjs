@@ -24,7 +24,6 @@ export default function MyPixelTab(props) {
         style={{
           marginTop: "14px",
           paddingBottom: "34px",
-          marginBottom: "34px",
           borderBottom: "1px solid #DFE3E8"
         }}
       >
@@ -32,6 +31,9 @@ export default function MyPixelTab(props) {
           rows={pixelTabRows}
           headings={["Client Account", "Status", "Action"]}
         ></PixelDataTable>
+      </div>
+      <div style={{marginTop: '30px', marginBottom: '20px'}}>
+        <Heading>Actions</Heading>
       </div>
       <ActionItem />
     </div>

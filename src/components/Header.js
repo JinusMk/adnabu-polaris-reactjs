@@ -13,7 +13,7 @@ export default function Header(props) {
         borderBottom: "1px solid #DFE3E8"
       }}
     >
-      <Stack alignment="center" horizontal>
+      <Stack alignment="center">
         <Stack.Item>
           <div
             style={{
