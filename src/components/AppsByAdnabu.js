@@ -23,7 +23,7 @@ export default function HelpTab(props) {
           <Stack.Item>
             <Stack horizontal spacing="tight">
               <Stack.Item>
-                <div style={{ marginRight: 76 }}>
+                <div style={{ marginRight: 42 }}>
                   <p style={{ fontSize: 16 }}>4 apps</p>
                 </div>
               </Stack.Item>
@@ -44,12 +44,12 @@ export default function HelpTab(props) {
         </Stack>
       </div>
       <div
-        style={{ backgroundColor: "white", marginLeft: 32, marginRight: 32 }}
+        style={{ backgroundColor: "white"}}
       >
-        <Stack spacing="extraLoose" Vertical>
+        <Stack spacing="extraLoose" distribution="center" Vertical>
           <Stack.Item>
             <Stack distribution="equalSpacing" horizontal>
-              <div style={{ width: 350, height: 150, marginLeft: 32 }}>
+              <div style={{ width: 350, height: 150 }}>
                 <Stack.Item>
                   <Stack horizontal>
                     <Stack.Item>
@@ -185,7 +185,7 @@ export default function HelpTab(props) {
           </Stack.Item>
           <Stack.Item>
             <Stack distribution="equalSpacing" horizontal>
-              <div style={{ width: 350, height: 150, marginLeft: 32 }}>
+              <div style={{ width: 350, height: 150 }}>
                 <Stack.Item>
                   <Stack horizontal>
                     <Stack.Item>
