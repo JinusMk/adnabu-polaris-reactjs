@@ -10,10 +10,10 @@ export default function HelpTab(props) {
     <div>
       <div
         style={{
-          marginLeft: 28,
-          marginTop: 76,
-          marginBottom: 76,
-          marginRight: 28
+          marginLeft: 55,
+          marginTop: 50,
+          padding: 20,
+          marginBottom: 50
         }}
       >
         <Stack vertical>

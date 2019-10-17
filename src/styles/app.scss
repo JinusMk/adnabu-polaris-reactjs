@@ -13,7 +13,16 @@ body{
         padding: 20px;
         margin-top: 30px;
         .Polaris-DataTable__Cell--verticalAlignTop{
-            text-align: left
+            text-align: left;
+            padding: 15px 10px 15px 10px;
         } 
+    }
+    .queries{
+        .Polaris-Stack__Item{
+            margin-left: 0 ;
+            .Polaris-Stack__Item--fill{
+                margin-left: 15px;
+            }
+        }
     }
 }
