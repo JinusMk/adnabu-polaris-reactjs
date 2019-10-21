@@ -1,14 +1,9 @@
 import React from "react";
-import {
-  Heading,
-  Banner,
-  Select,
-  EmptyState
-} from "@shopify/polaris";
+import { Heading, Banner, Select, EmptyState} from "@shopify/polaris";
 import ModalComponent from "./Modal";
-import CollapsibleComponent from "../components/Collapsible";
+import CommonQueries from "./CommonQueries";
+
 export default function ConnectAccount(props) {
-  console.log("propsConnectAc", props);
   return (
     <div style={{ padding: "20px", borderBottom: "1px solid #DFE3E8" }}>
       {props.modalOpen ? (
@@ -52,7 +47,7 @@ export default function ConnectAccount(props) {
           />
         ) : null}
       </EmptyState>
-      <CollapsibleComponent />
+      <CommonQueries/>
     </div>
   );
 }

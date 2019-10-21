@@ -1,8 +1,6 @@
 import React from "react";
 import { Stack, Avatar } from "@shopify/polaris";
 
-//Header to be Shown in every Tabs
-
 export default function Header(props) {
   return (
     <div

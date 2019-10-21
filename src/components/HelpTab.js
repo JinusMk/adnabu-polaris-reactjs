@@ -9,12 +9,12 @@ export default function HelpTab(props) {
     <div style={{ marginTop: 30,padding: 20 }}>
       <Heading element="h1">Frequently asked questions</Heading>
       <div
-        style={{
-          marginTop: 30,
-          paddingBottom: 47,
-          borderBottom: "1px solid #DFE3E8"
-        }}
-      >
+          style={{
+            marginTop: 30,
+            paddingBottom: 47,
+            borderBottom: "1px solid #DFE3E8"
+          }}
+        >
         <DescriptionList items={FAQs} />
       </div>
       <div style={{ marginTop: 30 }}>
