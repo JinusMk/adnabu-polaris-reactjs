@@ -1,12 +1,11 @@
 import React from 'react'
-import { Card, Collapsible, Stack, Icon, PopoverCloseSource } from '@shopify/polaris'
-import {
-    ChevronRightMinor, ChevronDownMinor, DisputeMinor} from "@shopify/polaris-icons";
+import { Card, Collapsible, Stack, Icon, Layout } from '@shopify/polaris'
+import {ChevronRightMinor, ChevronDownMinor, DisputeMinor} from "@shopify/polaris-icons";
+
 export default function QueryItem(props){
     return(
-        <Card.Section>
+      <Card.Section>
             <div onClick={() => props.handleToggle(props.id)}>
-              <Card.Subsection>
                 <Stack spacing="tight" vertical>
                   <Stack alignment="center" spacing="fill" horizontal>
                     <Stack.Item>
@@ -26,15 +25,16 @@ export default function QueryItem(props){
                     </Stack.Item>
                   </Stack>
                   <Collapsible open={props.open} id="basic-collapsible">
-                    <p style={{ marginBottom: "10px" }}>
-                      Your mailing list lets you contact customers or visitors
-                      who have shown an interest in your store. Reach out to
-                      them with exclusive offers or updates about your products.
-                    </p>
+                    <Layout>
+                      <Layout.Section>
+                          <p>Your mailing list lets you contact customers or visitors
+                          who have shown an interest in your store. Reach out to
+                          them with exclusive offers or updates about your products.</p>
+                      </Layout.Section>
+                    </Layout>
                   </Collapsible>
                 </Stack>
-              </Card.Subsection>
             </div>
-        </Card.Section>
+      </Card.Section>
     )
 }

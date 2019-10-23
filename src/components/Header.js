@@ -1,38 +1,24 @@
 import React from "react";
-import { Stack, Avatar } from "@shopify/polaris";
+import { Stack, Avatar, TextStyle, Layout } from "@shopify/polaris";
 
 export default function Header(props) {
   return (
-    <div
-      style={{
-        marginLeft: 32,
-        marginRight: 32,
-        paddingBottom: 18,
-        borderBottom: "1px solid #DFE3E8"
-      }}
-    >
-      <Stack alignment="center">
-        <Stack.Item>
-          <div
-            style={{
-              borderRadius: 10
-            }}
-          >
-            <Avatar
-              size="medium"
-              source={require("../assets/logo.png")}
-            ></Avatar>
-          </div>
-        </Stack.Item>
-        <Stack.Item fill>
-          <p style={{ fontSize: 16,maxWidth: '50vw', wordWrap: 'break-word', fontWeight: 300 }}>
-            Google Adwork Conversion Pixel & Tracking Code
-          </p>
-        </Stack.Item>
-        <Stack.Item>
-          <p style={{ fontSize: 12, fontWeight: 200 }}>by Adnabu</p>
-        </Stack.Item>
-      </Stack>
-    </div>
+      <Layout.Section>
+          <Stack alignment="center" wrap={false}>
+            <Stack.Item>
+                <Avatar
+                  size="medium"
+                  source={require("../assets/logo.png")}
+                />
+            </Stack.Item>
+            <Stack.Item fill>
+                {/* <TextStyle variation="subdued">Google Adwork <br/> Conversion Pixel & <br/> Tracking Code</TextStyle> */}
+                <TextStyle variation="subdued">Google Adwork  Conversion Pixel & Tracking Code</TextStyle>
+            </Stack.Item>
+            <Stack.Item>
+                <TextStyle variation="subdued">by Adnabu</TextStyle>
+            </Stack.Item>
+          </Stack>
+      </Layout.Section>
   );
 }

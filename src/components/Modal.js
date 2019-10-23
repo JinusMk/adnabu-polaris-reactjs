@@ -1,9 +1,8 @@
 import React from "react";
-import { TextContainer, Modal } from "@shopify/polaris";
-//Modal
+import { Modal } from "@shopify/polaris";
+
 export default function ModalComponent(props) {
   return (
-    <div style={{ height: "500px" }}>
       <Modal
         open={props.modalOpen}
         onClose={() => props.handleModalClick()}
@@ -20,14 +19,8 @@ export default function ModalComponent(props) {
         ]}
       >
         <Modal.Section>
-          <TextContainer>
-            <p>
-              Do you want to include shopping charges in your conversion/sale
-              value?
-            </p>
-          </TextContainer>
+            <p>Do you want to include shopping charges in your conversion/sale value?</p>
         </Modal.Section>
       </Modal>
-    </div>
   );
 }

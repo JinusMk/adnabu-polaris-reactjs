@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Heading, Select, Banner } from "@shopify/polaris";
+import { Stack, Heading, Select, Banner, Page, Layout, DisplayText } from "@shopify/polaris";
 import PixelDataTable from "./PixelDataTable.js";
 import ActionItem from "./ActionItem";
 import CommonQueries from "./CommonQueries";
@@ -13,44 +13,47 @@ const rows = [
 
 export default function DashboardTab(props) {
   return (
-    <div style={{ marginTop: 25, padding: 20 }} className="dashboard-tab">
-        <Status />
-        <Stack distribution="fill">
-          <Heading>Current client account</Heading>
-          <Select
-            options={["Test Account"]}
-            // value={}
-            onChange={props.handleAccountChange}
-          />
-        </Stack>
-        <div style={{ marginTop: 39, marginBottom: 32 }}>
-          <Banner
-            title="Your Conversion Pixel is live!"
-            status="success"
-            onDismiss={() => {}}
-          >
-            <p>
-              Tracker (Adnabu test) has been set up or your Google Ads account
-              0345645334
-            </p>
-          </Banner>
-        </div>
-        <div style={{ textAlign: "left" }}>
-          <PixelDataTable rows={rows} />
-        </div>
-        <div
-            style={{
-              marginTop: 28,
-              marginBottom: 28,
-              borderTop: "1px solid #DFE3E8"
-            }}
-          >
-          <div style={{ marginTop: 28, marginBottom: 11 }}>
+    <Page >
+      <Layout>
+        <Layout.Section>
+            <Status />
+        </Layout.Section>
+        <Layout.Section>
+            <Stack distribution="fill" wrap={false} alignment="center">
+              <DisplayText size="small">Current client account</DisplayText>
+              <Select
+                options={["Test Account"]}
+                // value={}
+                onChange={props.handleAccountChange}
+              />
+            </Stack>
+        </Layout.Section>
+        <Layout.Section>
+            <Banner
+              title="Your Conversion Pixel is live!"
+              status="success"
+              onDismiss={() => {}}
+            >
+                Tracker (Adnabu test) has been set up or your Google Ads account
+                0345645334
+            </Banner>
+        </Layout.Section>
+        <Layout.Section>
+            <PixelDataTable rows={rows} />
+        </Layout.Section>
+        <Layout.Section>
             <Heading>Actions</Heading>
-          </div>
-          <ActionItem />
-        </div>
-      <CommonQueries/>
-    </div>
+        </Layout.Section>
+        <Layout.Section>
+            <ActionItem action={true} />
+        </Layout.Section>
+        <Layout.Section>
+            <Heading>Common Queries</Heading>
+        </Layout.Section>
+        <Layout.Section>
+            <CommonQueries/>
+        </Layout.Section>
+      </Layout>
+    </Page>
   );
 }

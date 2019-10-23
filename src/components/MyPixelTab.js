@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Badge, Button } from "@shopify/polaris";
+import { Heading, Badge, Button, Layout, Page } from "@shopify/polaris";
 import PixelDataTable from "./PixelDataTable.js";
 import ActionItem from "./ActionItem";
 const pixelTabRows = [
@@ -9,18 +9,24 @@ const pixelTabRows = [
 ];
 export default function MyPixelTab(props) {
   return (
-    <div className="myPixel-tab">
-      <Heading>My Pixels</Heading>
-        <div className="myPixel-table-wrapper"style={{ marginTop: "14px", paddingBottom: "34px", borderBottom: "1px solid #DFE3E8" }}>
-          <PixelDataTable
-            rows={pixelTabRows}
-            headings={["Client Account", "Status", "Action"]}
-          />
-        </div>
-        <div style={{marginTop: '30px', marginBottom: '20px'}}>
-          <Heading>Actions</Heading>
-        </div>
-      <ActionItem />
-    </div>
+    <Page>
+        <Layout>
+            <Layout.Section>
+                <Heading>My Pixels</Heading>
+            </Layout.Section>
+            <Layout.Section>
+                <PixelDataTable
+                  rows={pixelTabRows}
+                  headings={["Client Account", "Status", "Action"]}
+                />
+            </Layout.Section>
+            <Layout.Section>
+                <Heading>Actions</Heading>
+            </Layout.Section>
+            <Layout.Section>
+                <ActionItem />
+            </Layout.Section>
+        </Layout>
+    </Page>
   );
 }

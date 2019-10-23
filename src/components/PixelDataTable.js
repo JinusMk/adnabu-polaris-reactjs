@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, DataTable } from "@shopify/polaris";
+
 export default function PixelDataTable(props) {
   return (
-    <div style={{ borderBottom: "1px solid #DFE3E8" }}>
       <Card>
         <DataTable
           columnContentTypes={[
@@ -16,6 +16,5 @@ export default function PixelDataTable(props) {
           rows={props.rows}
         />
       </Card>
-    </div>
   );
 }
