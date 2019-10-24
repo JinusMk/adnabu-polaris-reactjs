@@ -1,9 +1,10 @@
 import React from "react";
-import { Stack, Heading, Select, Banner, Page, Layout, DisplayText } from "@shopify/polaris";
+import { Stack, Heading, Banner, Page, Layout, DisplayText } from "@shopify/polaris";
 import PixelDataTable from "./PixelDataTable.js";
 import ActionItem from "./ActionItem";
 import CommonQueries from "./CommonQueries";
 import { Status } from "./index";
+import SelectClientAccount from './SelectClientAccount'
 const rows = [
   ["Latest sale received on (any surce)", "No data yet"],
   ["Latest sale received at Google Ads", "--"],
@@ -21,11 +22,7 @@ export default function DashboardTab(props) {
         <Layout.Section>
             <Stack distribution="fill" wrap={false} alignment="center">
               <DisplayText size="small">Current client account</DisplayText>
-              <Select
-                options={["Test Account"]}
-                // value={}
-                onChange={props.handleAccountChange}
-              />
+                <SelectClientAccount />
             </Stack>
         </Layout.Section>
         <Layout.Section>

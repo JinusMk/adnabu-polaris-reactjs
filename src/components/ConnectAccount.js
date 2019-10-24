@@ -1,8 +1,8 @@
 import React from "react";
-import { Heading, Banner, Select, EmptyState, Page, Layout} from "@shopify/polaris";
+import { Heading, Banner, EmptyState, Page, Layout} from "@shopify/polaris";
 import ModalComponent from "./Modal";
 import CommonQueries from "./CommonQueries";
-
+import SelectClientAccount from './SelectClientAccount'
 export default function ConnectAccount(props) {
   return (
       <Page>
@@ -37,12 +37,7 @@ export default function ConnectAccount(props) {
                 : "Connect your google Ads account to get started "}
             </Heading>
             {props.isConnected ? (
-              <Select
-                label="Select your account"
-                options={["Test Account 1"]}
-                onChange={props.handleAccountChange}
-                // value={selected}
-              />
+               <SelectClientAccount label={true}/>
             ) : null}
           </EmptyState>
           <Layout>

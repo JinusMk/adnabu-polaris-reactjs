@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import QueryItem from './QueryItem'
+import { Card } from '@shopify/polaris'
 
 export default function CommonQueries(props) {
   const [active1, setActive1] = useState(false);
@@ -22,10 +23,10 @@ export default function CommonQueries(props) {
     }
   }, []);
   return (
-      <React.Fragment>
-            <QueryItem open={active1} id={1} handleToggle={handleToggle}/>
-            <QueryItem open={active2} id={2} handleToggle={handleToggle}/>
-            <QueryItem open={active3} id={3} handleToggle={handleToggle}/>
-      </React.Fragment>
+      <Card>
+        <QueryItem open={active1} id={1} handleToggle={handleToggle}/>
+        <QueryItem open={active2} id={2} handleToggle={handleToggle}/>
+        <QueryItem open={active3} id={3} handleToggle={handleToggle}/>
+      </Card>
   );
 }
